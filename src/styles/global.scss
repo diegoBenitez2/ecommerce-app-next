@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables';
+@import './fonts';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-width: 375px;
+  min-height: 100vh;
+  font-family: clash-display,sans-serif;
+}
+
+#root {
+  width: 100%;
+}
+
+// Color
+.color-primary { color: $primary; }
+.color-dark-primary { color: $dark-primary; }
+.color-light-gray { color: $light-gray; }
+.color-border-gray { color: $border-gray; }
+.color-white { color: $white; }
+.color-border-dark { color: $border-dark; }
+
+// Background
+.background-primary { background-color: $primary; }
+.background-dark-primary { background-color: $dark-primary; }
+.background-light-gray { background-color: $light-gray; }
+.background-border-gray { background-color: $border-gray; }
+.background-white { background-color: $white; }
+.background-border-dark { background-color: $border-dark; }
+
+// font-size
+.h4 {
+  font-family: clash-display, system-ui, sans-serif;
+  font-size: $h4;
+}
+
+.display-3 {
+  font-family: satoshi, system-ui, sans-serif;
+  font-size: $display-3;
+}
+.display-1 {
+  font-size: $display-1;
+}
+.display-2 {
+  font-size: $display-2;
+}
+
+// helpers
+  .cr-pointer {
+    cursor: pointer;
+  }
+
+
+

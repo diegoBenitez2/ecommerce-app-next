@@ -1,0 +1,41 @@
+@import '@/styles/variables.scss';
+
+.InputText {
+  font-family: satoshi,system-ui,sans-serif;
+  padding: 17px 10px 17px 30px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: $display-2;
+  &--primary{
+    background-color: $border-dark;
+    color: $white;
+    .InputText::placeholder {
+      color: $white;
+    }
+  }
+  &--secondary {
+    background-color: $light-gray;
+    color: $border-gray ;
+    .InputText::placeholder {
+      color: $border-gray;
+    }
+  }
+  &--tertiary {
+    background-color: $white;
+    color: $border-dark ;
+    .InputText::placeholder {
+      color: $border-dark;
+    }
+  }
+  &--fourtiary {
+    background-color: $primary-light;
+    color: $light-gray ;
+    .InputText::placeholder {
+      color: $light-gray;
+    }
+  }
+  &::focus {
+    outline: 0;
+  }
+}

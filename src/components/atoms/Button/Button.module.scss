@@ -1,0 +1,46 @@
+@import '@styles/variables.scss';
+
+.Button {
+  font-family: satoshi,system-ui;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-size: $display-2;
+  border: 0;
+  white-space: nowrap;
+  &__icon {
+    margin-left: 1em;
+  }
+  &--primary {
+    background-color: $white;
+    color: #000;
+  }
+  &--secondary {
+    background-color: $light-gray;
+    color: #000;
+  }
+  &--tertiary {
+    background-color: $dark-primary;
+    color: $white;
+  }
+  &--fourty {
+    background-color: $primary;
+    color: $white;
+  }
+  &--fifty {
+    background-color: $dark-primary;
+    color: $white;
+  }
+  &--medium {
+    width: 111px;
+    height: 56px;
+  }
+  &--small {
+    width: 95px;
+    height: 48px;
+  }
+  &:disabled {
+    opacity: .6;
+  }
+
+}

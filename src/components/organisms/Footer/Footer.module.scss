@@ -1,0 +1,7 @@
+.Footer {
+  .Menu__icons {
+    svg:not(svg:last-child) {
+      margin-right: 24px;
+    }
+  }
+}

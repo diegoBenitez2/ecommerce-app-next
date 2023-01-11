@@ -1,3 +1,31 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "env": {
+      "browser": true,
+      "node": true,
+      "es2021": true
+  },
+  "extends": [
+      "next/core-web-vitals",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier"
+  ],
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react"
+  ],
+  "ignorePatterns": ["**/*.config.js", "**/eslint.config.js", "**/*.test.js", "**/*.drawio"],
+  "rules": {
+      "semi": ["error"],
+      "no-console": ["warn", { "allow": ["warn"] }],
+      "react/prop-types": 0,
+      "react/react-in-jsx-scope": 0
+  }
 }

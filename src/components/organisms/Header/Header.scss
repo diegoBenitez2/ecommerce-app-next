@@ -1,0 +1,16 @@
+.Header {
+  &__nav {
+    a {
+      &:nth-child(2) {
+        margin: 0 27px;
+      }
+    }
+  }
+  &__icons {
+    &_icon{
+      &:nth-child(2) {
+        margin: 0 27px;
+      }
+    }
+  }
+}

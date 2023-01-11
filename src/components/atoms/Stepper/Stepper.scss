@@ -1,0 +1,42 @@
+.Stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(122px - 20px);
+  height: 46px; 
+  padding: 0  10px;
+  background-color: #F9F9F9;
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+  {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number]
+  {
+    -moz-appearance: textfield;
+  }
+  input {
+    border: 0;
+    width: 50px;
+    outline: 0;
+    background: none;
+    text-align: center;
+    &:focus {
+      outline: 0;
+    }
+  }
+  &__controls {
+    border: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    &:active {
+      transform: scale(.8);
+    }
+  }
+}

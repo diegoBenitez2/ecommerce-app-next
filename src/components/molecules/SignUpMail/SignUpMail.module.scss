@@ -1,0 +1,14 @@
+.SignUpMail {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  &__error {
+    color: red;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 10px;
+    font-style: italic;
+  }
+}
