@@ -1,11 +1,14 @@
-import './Checkbox.scss';
+
+import cn from 'classnames';
+import styles from  './Checkbox.module.scss';
 
 const Checkbox = ({ 
   id, 
   name, 
   value, 
   label='checkbox', 
-  onchange }) => {
+  onchange,
+  className }) => {
   const handleChange = ({ target }) => {
     if (target.checked) {
       onchange({ ...target, name, value, });
@@ -14,7 +17,7 @@ const Checkbox = ({
     }
   };
   return (
-    <div className='Checkbox'>
+    <div className={cn(styles.Checkbox, className )}>
       <input 
         type='checkbox' 
         id={id} 

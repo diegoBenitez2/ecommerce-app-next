@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaLinkedin, FaFacebook, FaTwitter, FaSkype }
 from 'react-icons/fa';
+import cn from 'classnames';
 import SignUpMail from '@molecules/SignUpMail/SignUpMail';
 import styles from  './Footer.module.scss';
 
 function Footer() {
   return (
-    <footer className={`${styles.Footer} bg-dark-primary pt-[53px] px-6  md:px-[80px]`}>
+    <footer className={`bg-dark-primary pt-[53px] px-6  md:px-[80px]`}>
       <div className='md:flex block mb-6'>
         <div className='w-full md:flex md:w-50  '>
           <div className="w-full m-0 text-white text-center md:text-left">
@@ -28,7 +29,7 @@ function Footer() {
             <p className='mb-3'>
               Social links
             </p>
-            <div className={`${styles.Menu}__icons flex align-center justify-center md:justify-start color-white`}>
+            <div className={cn(styles.Menu__icons ,'flex align-center justify-center md:justify-start color-white mb-4')}>
               <FaLinkedin  />
               <FaFacebook  />
               <FaTwitter  />

@@ -25,8 +25,8 @@ function SignUpMail({
   };
 
   return (
-    <div className={styles.SignUpMail}>
-      <div className={`${styles.SignUpMail}__wrapper`}>
+    <div>
+      <div className={`${styles.wrapper}`}>
         <InpuText 
           id='sing-up'
           name={name}
@@ -44,7 +44,7 @@ function SignUpMail({
       </div>
       { 
         invalid &&
-        <span className={`${styles.SignUpMail}__error`}>El formato invalido</span>
+        <span className={`${styles.error}`}>El formato invalido</span>
       }
     </div>
   );  

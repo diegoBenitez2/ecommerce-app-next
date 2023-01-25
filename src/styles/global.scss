@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import './variables';
 @import './fonts';
@@ -46,9 +46,11 @@ body {
   font-family: satoshi, system-ui, sans-serif;
   font-size: $display-3;
 }
+
 .display-1 {
   font-size: $display-1;
 }
+
 .display-2 {
   font-size: $display-2;
 }
@@ -57,6 +59,3 @@ body {
   .cr-pointer {
     cursor: pointer;
   }
-
-
-

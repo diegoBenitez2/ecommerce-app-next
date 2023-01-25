@@ -1,5 +1,5 @@
 import styles from './InputText.module.scss';
-
+import cn from 'classnames';
 const InpuText = ({ 
   value,
   name,
@@ -16,7 +16,7 @@ const InpuText = ({
         data-testid='input-custom'
         name={name}
         value={value}
-        className={`${styles.InputText} ${styles.InputText}--${style}`}
+        className={cn(styles.InputText, styles[style])}
         onInput={handleInput}/>
   );
 };

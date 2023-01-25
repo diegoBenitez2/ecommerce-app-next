@@ -1,3 +1,4 @@
+import cn from "classnames";
 import { FaAngleDown } from 'react-icons/fa';
 import styles from './Button.module.scss';
 
@@ -12,13 +13,13 @@ const Button = ({
     <button
       data-testid='btn-custom'
       disabled={disabled}
-      className={`${styles.Button} ${styles.Button}--${size} ${styles.Button}--${style}`}
+      className={cn(styles.Button, styles[size], styles[style], 'flex')}
       onClick={onclick}>
       <span>{ text }</span>
       {
-        iconColor && <FaAngleDown 
-                        color={iconColor} 
-                        className={`${styles.Button}__icon`}
+        iconColor && <FaAngleDown
+                        style={{ color: iconColor }}
+                        className={`${styles.Button__icon}`}
                         data-testid='btn-icon' /> 
       }
       

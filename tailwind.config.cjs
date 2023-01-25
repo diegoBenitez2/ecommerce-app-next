@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.jsx"
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -12,6 +12,10 @@ module.exports = {
     extend: {
       keyframes: {
       }
+    },
+    fontFamily: {
+      'satoshi': ['satoshi', 'system-ui'],
+      'clash': ['clash-display', 'system-ui', 'sans-serif'],
     },
     fontSize: {
       sm: '0.9rem',

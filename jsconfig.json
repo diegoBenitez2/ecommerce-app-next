@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["src/*"],
-      "@styles/*": ["src/styles/*"],
-      "@pages/*": ["src/pages/*"],
-      "@atoms/*": ["src/components/atoms/*"],
-      "@molecules/*": ["src/components/molecules/*"],
-      "@organisms/*": ["src/components/organisms/*"],
-      "@templates/*": ["src/components/templates/*"],
+      "@styles/*": ["styles/*"],
+      "@pages/*": ["pages/*"],
+      "@components/*": ["components/*"],
+      "@organisms/*": ["components/organisms/*"],
+      "@atoms/*": ["components/atoms/*"],
+      "@molecules/*": ["components/molecules/*"],
+      "@containers/*": ["components/containers/*"],
     }
   }
 }

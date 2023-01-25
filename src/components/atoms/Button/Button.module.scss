@@ -11,36 +11,35 @@
   &__icon {
     margin-left: 1em;
   }
-  &--primary {
-    background-color: $white;
-    color: #000;
-  }
-  &--secondary {
-    background-color: $light-gray;
-    color: #000;
-  }
-  &--tertiary {
-    background-color: $dark-primary;
-    color: $white;
-  }
-  &--fourty {
-    background-color: $primary;
-    color: $white;
-  }
-  &--fifty {
-    background-color: $dark-primary;
-    color: $white;
-  }
-  &--medium {
-    width: 111px;
-    height: 56px;
-  }
-  &--small {
-    width: 95px;
-    height: 48px;
-  }
   &:disabled {
     opacity: .6;
   }
-
+}
+.primary {
+  background-color: $white;
+  color: #000;
+}
+.secondary {
+  background-color: $light-gray;
+  color: #000;
+}
+.tertiary {
+  background-color: $dark-primary;
+  color: $white;
+}
+.fourty {
+  background-color: $primary;
+  color: $white;
+}
+.fifty {
+  background-color: $dark-primary;
+  color: $white;
+}
+.small {
+  min-width: 95px;
+  height: 48px;
+}
+.medium {
+  min-width: 111px;
+  height: 56px;
 }
