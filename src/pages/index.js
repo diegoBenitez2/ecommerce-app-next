@@ -13,18 +13,13 @@ export default function Home() {
         <title>Ecommerce | Products</title>
       </Head>
       <Layout>
-        <div className='p-5 mx-auto text-center border'>
+        <div className='p-5 mx-auto text-center'>
           <h1 className='mb-7 text-3xl md:text-4xl'>View all products</h1>
-          <div className='flex justify-evenly'>
-            <Button
-              text={'Sorting'}
-              style={'primary'}
-              size={'small'}
-              iconColor={'#000'} />
+          <div className='flex justify-between'>
             <Button
               text={'Filtering'}
               style={'primary'}
-              size={'small'}
+              size={'medium'}
               iconColor={'#000'} 
               onclick={() => setOpenFilter(true)}/>
           </div>
