@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -10,8 +9,12 @@ module.exports = {
   },
   theme: {
     extend: {
-      keyframes: {
-      }
+      gridTemplateColumns: {
+        'fit': 'repeat(auto-fit, minmax(163px, 1fr))',
+      },
+      gridTemplateRows: {
+        'fit': 'repeat(auto-fit, minmax(288px, 1fr))',
+      },
     },
     fontFamily: {
       'satoshi': ['satoshi', 'system-ui'],
