@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from '@containers/Layout';
 import FilterProductsPanel from '@components/FilterProductsPanel';
 import Button from '@atoms/Button/Button';
+import ProductCard  from '@atoms/ProductCard/ProductCard';
 import { useState } from 'react';
 
 export default function Home() {
@@ -28,6 +29,13 @@ export default function Home() {
             toggleOpen={setOpenFilter}
           />
         </div>
+        <section className='bg-white p-6 grid gap-3 grid-cols-fit grid-rows-fit'>
+          {
+            [1,2,3,4,5,6,7,8,9,10,11,12].map((_, idx) => (
+              <ProductCard key={idx} />
+              ))
+            }
+        </section>
       </Layout>
     </>
   );
