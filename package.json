@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:eslint": "npx eslint ./src/**/**.jsx",
+    "lint": "npx eslint --ext .jsx src/ --ext .js src/",
     "lint:style": "npx stylelint ./src/**/*.scss"
   },
   "dependencies": {
