@@ -1,5 +1,7 @@
+import Image  from 'next/image';
 import { FaShoppingCart, FaImage } from 'react-icons/fa';
-import './ProductCard.scss';
+import cn from 'classnames';
+import style from'./ProductCard.module.scss';
 
 const ProductCard = ({ 
   id,
@@ -10,23 +12,23 @@ const ProductCard = ({
   link,
   addShoppingCard }) => {
   return (
-    <a className='ProductCard' href={link}>
-    <article className='ProductCard__container cr-pointer'>
+    <a className={style.Link} href={link}>
+    <article className={cn(style.Container ,'cr-pointer')}>
       { urlImage 
-        ?  <img 
+        ?  <Image 
         src={urlImage} 
         alt={altImage}
-        className='ProductCard__picture' /> 
-        : <div className='ProductCard__notImage background-border-dark '>
+        className={style.Picture} /> 
+        : <div className={cn(style.NotImage, 'background-border-dark')}>
             <FaImage size='5rem' title='not image' className="color-border-gray" />
           </div>
       }
-      <div className="ProductCard__info">
-        <p className="ProductCard__info_title h4">{
+      <div className={style.Info}>
+        <p className={cn(style.Info_Title, 'h4')}>{
         title || '--'}</p>
-        <p className="display-3 ProductCard__info_desc">${price || '--'}</p>
+        <p className={cn(style.Info_Desc, 'display-3')}>${price || '--'}</p>
       </div>
-      <div className="ProductCard__tap">
+      <div className={style.Tap}>
         <button
           onClick={() => addShoppingCard(id)}>
         <FaShoppingCart
