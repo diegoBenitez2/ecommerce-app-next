@@ -1,11 +1,11 @@
 import { FaRegCheckCircle, FaRegCreditCard, FaShippingFast, FaTree } from 'react-icons/fa';
 import './FeatureCard.scss';
 
-const FeatureCard = ({ 
-  title, 
+const FeatureCard = ({
+  title,
   desc,
-  iconType, 
-  color = 'dark-primary', 
+  iconType,
+  color = 'dark-primary',
   background = 'light-gray',  }) => {
 
   let icon;
@@ -16,7 +16,7 @@ const FeatureCard = ({
     case 'checkCircle':
       icon = <FaRegCheckCircle data-testid='icon' title='icon-feature-checkCircle' size='1.3em'  />;
       break;
-    case 'creditCard': 
+    case 'creditCard':
       icon = <FaRegCreditCard data-testid='icon' title='icon-feature-creditCard' size='1.3em'  />;
     break;
     case 'recycled':

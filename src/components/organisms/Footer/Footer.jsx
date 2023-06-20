@@ -61,7 +61,7 @@ function Footer() {
           <p className='text-white mb-2'>
             Join our mailing list
           </p>
-          <SignUpMail 
+          <SignUpMail
             name={'signUp'}
             theme={['fourtiary', 'primary']} />
         </div>

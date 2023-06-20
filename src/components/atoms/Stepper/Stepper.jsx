@@ -19,7 +19,7 @@ const Stepper = ({ name, id, value, onstep }) => {
           <FaMinus color='#CAC6DA' size='.8em' />
         </button>
         <input data-testid='stepper' type='number' id={id} name={name} value={value} onChange={() => {}} />
-      <button 
+      <button
         className='Stepper__controls'
         onClick={handlePlusCount}>
           <FaPlus color='#CAC6DA' size='.8em' />
