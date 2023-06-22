@@ -2,11 +2,11 @@
 import cn from 'classnames';
 import styles from  './Checkbox.module.scss';
 
-const Checkbox = ({ 
-  id, 
-  name, 
-  value, 
-  label='checkbox', 
+const Checkbox = ({
+  id,
+  name,
+  value,
+  label='checkbox',
   onchange,
   className }) => {
   const handleChange = ({ target }) => {
@@ -18,12 +18,12 @@ const Checkbox = ({
   };
   return (
     <div className={cn(styles.Checkbox, className )}>
-      <input 
-        type='checkbox' 
-        id={id} 
+      <input
+        type='checkbox'
+        id={id}
         name={name}
         value={value}
-        onChange={handleChange} /> 
+        onChange={handleChange} />
       <label htmlFor={id}>{label}</label>
     </div>
   );

@@ -3,7 +3,7 @@ import { FaShoppingCart, FaImage } from 'react-icons/fa';
 import cn from 'classnames';
 import style from'./ProductCard.module.scss';
 
-const ProductCard = ({ 
+const ProductCard = ({
   id,
   urlImage,
   altImage,
@@ -14,11 +14,11 @@ const ProductCard = ({
   return (
     <a className={style.Link} href={link}>
     <article className={cn(style.Container ,'cr-pointer')}>
-      { urlImage 
-        ?  <Image 
-        src={urlImage} 
+      { urlImage
+        ?  <Image
+        src={urlImage}
         alt={altImage}
-        className={style.Picture} /> 
+        className={style.Picture} />
         : <div className={cn(style.NotImage, 'background-border-dark')}>
             <FaImage size='5rem' title='not image' className="color-border-gray" />
           </div>
@@ -32,11 +32,11 @@ const ProductCard = ({
         <button
           onClick={() => addShoppingCard(id)}>
         <FaShoppingCart
-          size='1.5em' 
+          size='1.5em'
           className='cr-pointer color-border-gray' />
         </button>
       </div>
-    </article> 
+    </article>
     </a>
   );
 };

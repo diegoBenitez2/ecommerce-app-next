@@ -1,6 +1,6 @@
 import styles from './InputText.module.scss';
 import cn from 'classnames';
-const InpuText = ({ 
+const InpuText = ({
   value,
   name,
   style,

@@ -2,10 +2,10 @@ import cn from "classnames";
 import { FaAngleDown } from 'react-icons/fa';
 import styles from './Button.module.scss';
 
-const Button = ({ 
-  text='Button', 
-  size='small', 
-  iconColor, 
+const Button = ({
+  text='Button',
+  size='small',
+  iconColor,
   style,
   disabled,
   onclick}) => {
@@ -20,9 +20,9 @@ const Button = ({
         iconColor && <FaAngleDown
                         style={{ color: iconColor }}
                         className={`${styles.Button__icon}`}
-                        data-testid='btn-icon' /> 
+                        data-testid='btn-icon' />
       }
-      
+
     </button>
   );
 };

@@ -45,12 +45,7 @@
 }
 .Picture {
   max-width: 100%;
-  max-height: 69%;
-  height: auto;
   object-fit: contain;
-  @include media768 {
-    max-height: 80%;
-  } 
 }
 .NotImage {
   display: flex;
@@ -58,10 +53,12 @@
   justify-content: center;
 }
 .Info {
+  padding: 15px 0;
   &_Desc, &_Title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-weight: 400px;
   }
   &_Desc {
     margin: 0;

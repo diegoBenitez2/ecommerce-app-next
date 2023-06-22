@@ -4,7 +4,7 @@ import InpuText from '@atoms/InputText/InpuText';
 import styles from  './SignUpMail.module.scss';
 
 
-function SignUpMail({ 
+function SignUpMail({
   onSignMail,
   onInput,
   value,
@@ -27,7 +27,7 @@ function SignUpMail({
   return (
     <div>
       <div className={`${styles.wrapper}`}>
-        <InpuText 
+        <InpuText
           id='sing-up'
           name={name}
           style={theme[0]}
@@ -35,19 +35,19 @@ function SignUpMail({
           value={value}
           oninput={handlerInputMail}
           maxLength={50} />
-        <Button 
+        <Button
           text='Sign Up'
           size='medium'
           style={theme[1]}
           disabled={invalid}
           onclick={onSignMail} />
       </div>
-      { 
+      {
         invalid &&
         <span className={`${styles.error}`}>El formato invalido</span>
       }
     </div>
-  );  
+  );
 }
 
 export default SignUpMail;

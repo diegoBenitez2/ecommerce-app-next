@@ -1,6 +1,6 @@
 import { FiX }  from "react-icons/fi";
 import { FiChevronDown } from "react-icons/fi";
-import { FaLongArrowAltRight } from "react-icons/fa"; 
+import { FaLongArrowAltRight } from "react-icons/fa";
 import Checkbox from "@atoms/Checkbox/Checkbox";
 import cn from "classnames";
 import { useState } from "react";
@@ -14,8 +14,8 @@ const FilterProductsPanel = ({ open, toggleOpen }) => {
           <span className="text-xl">Filter by</span>
           <div className="flex items-center">
             <span className="underline text-base cr-pointer mr-4">Clear</span>
-            <FiX 
-              className="w-[25px] h-[25px] fill-black cr-pointer" 
+            <FiX
+              className="w-[25px] h-[25px] fill-black cr-pointer"
               onClick={() => toggleOpen(false)}/>
           </div>
         </div>
@@ -23,7 +23,7 @@ const FilterProductsPanel = ({ open, toggleOpen }) => {
           <li className="px-4 py-3 text-left text-dark-primary border-2 border-x-white border-y-light-gray relative">
             <div className="flex items-center justify-between w-full">
               <span className="font-clash text-dark-primary mr-3">Product Type</span>
-              <FiChevronDown className={cn("w-[20px] h-[20px] text-dark-primary cr-pointer transition transform ease duration-500", {'rotate-180': collapse})} 
+              <FiChevronDown className={cn("w-[20px] h-[20px] text-dark-primary cr-pointer transition transform ease duration-500", {'rotate-180': collapse})}
               onClick={() => setCollapse(!collapse)}/>
             </div>
             <ul className={cn("p-0 border-white overflow-hidden  transition-all ease-in-out ", [collapse ? 'h-[0] mt-0': 'mt-3 h-[auto] border-2 border-t-light-gray  '])}>
