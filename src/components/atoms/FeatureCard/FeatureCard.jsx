@@ -1,5 +1,6 @@
 import { FaRegCheckCircle, FaRegCreditCard, FaShippingFast, FaTree } from 'react-icons/fa';
-import './FeatureCard.scss';
+import style from './FeatureCard.module.scss';
+import cn from 'classnames';
 
 const FeatureCard = ({
   title,
@@ -27,10 +28,10 @@ const FeatureCard = ({
       break;
   }
   return (
-    <article data-testid='feature-card' className={`FeatureCard background-${background} color-${color}`}>
+    <article data-testid='feature-card' className={cn(style.FeatureCard, `background-${background} color-${color}`)}>
       {icon}
-      <h4 className='h4'>{ title }</h4>
-      <p>{ desc }</p>
+      <h4 className={style.Title}>{ title }</h4>
+      <p className={style.Desc}>{ desc }</p>
     </article>
   );
 };
