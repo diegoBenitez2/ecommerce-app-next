@@ -4,6 +4,6 @@
     "stylelint-config-prettier-scss"
   ],
   "rules": {
-    "selector-class-pattern": "^[a-zA-Z][a-zA-Z0-9]+$"
+    "selector-class-pattern": null
   }
 }
