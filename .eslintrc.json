@@ -19,9 +19,20 @@
       "sourceType": "module"
   },
   "plugins": [
-      "react"
+      "react",
+      "testing-library"
   ],
-  "ignorePatterns": ["**/*.config.js", "**/eslint.config.js", "**/*.test.js", "**/*.drawio"],
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
+  "ignorePatterns": ["**/*.config.js", "**/eslint.config.js", "**/*.drawio"],
   "rules": {
       "semi": ["error"],
       "no-console": ["warn", { "allow": ["warn"] }],
