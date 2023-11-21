@@ -20,5 +20,5 @@ jobs:
         with:
           path: node_modules
           key: ${{ github.sha }}-node-modules-${{ runner.os }}
-      - name: testing js
-        run: npm run test 
+      - name: testing components
+        run: npm run test:unit 
