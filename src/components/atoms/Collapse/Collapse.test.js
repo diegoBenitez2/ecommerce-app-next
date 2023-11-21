@@ -7,15 +7,15 @@ describe('Collapse', () => {
   beforeEach(() => {
     const props = {
       label: 'label',
-      content: <div>content</div>,
+      content: <div data-testid='collapse-content'>content</div>,
     };
     render(<Collapse {...props} />);
   });
     test('should render props', () => {
       // Assert
       expect(screen.getByText('label')).toBeInTheDocument();
-      expect(screen.getByTestId('collapse-content')).toContainHTML('<div>content</div>');
-  })
+      expect(screen.getByTestId('collapse-content')).toContainHTML('<div data-testid="collapse-content">content</div>');
+  });
     test('should render content when click header', () => {
       // Assert
       expect(screen.getByTestId('collapse')).toHaveClass('h-fit');

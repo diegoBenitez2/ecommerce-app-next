@@ -11,6 +11,7 @@ export const Collapse = ({
 
   return (
     <div
+      data-testid='collapse'
       className={cn("px-4 text-left text-dark-primary border-2 border-x-white border-y-light-gray relative overflow-hidden transition-all duration-[500ms] ease-in-out", [collapse ? 'h-[52px] mt-0': 'h-fit'])}>
       <button
         className={cn("flex items-center justify-between w-full py-3 border-white bg-transparent cr-pointer", [collapse ? 'border-b-2' : 'border-b-0'])}

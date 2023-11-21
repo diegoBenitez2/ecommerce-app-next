@@ -18,9 +18,9 @@ const Stepper = ({ name, id, value, onstep }) => {
         onClick={handleMinusCount}>
           <FaMinus color='#CAC6DA' size='.8em' />
         </button>
-        <input 
+        <input
           data-testid='stepper'
-          type='number' 
+          type='number'
           id={id}
           name={name}
           value={value}

@@ -1,9 +1,11 @@
 @import '@styles/mediaQueries.scss';
+@import '@styles/variables.scss';
 
 .Link {
   text-decoration: none;
   color: inherit;
 }
+
 .Tap {
   display: flex;
   position: absolute;
@@ -14,9 +16,10 @@
   left: 0;
   right: 0;
   overflow-y: hidden;
-  background: rgba($color: #000000, $alpha: .3);
+  background: rgba($color: $black, $alpha: 30%);
   transition: height .2s ease;
   will-change: height;
+
   button {
     border:0;
     background: none;
@@ -34,32 +37,35 @@
   transition-property: min-width, height;
   transition-duration: .2s;
   transition-timing-function: ease-out;
+
   &:hover .Tap {
     height: 50px;
   }
 }
 
-.NotImage {
-  max-width: 100%;
-  height: 100%;
-}
 .Picture {
   max-width: 100%;
   object-fit: contain;
 }
+
 .NotImage {
+  max-width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .Info {
   padding: 15px 0;
+
   &_Desc, &_Title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: 400px;
   }
+
   &_Desc {
     margin: 0;
   }
