@@ -5,6 +5,17 @@
       "node": true,
       "es2021": true
   },
+  "globals": {
+    "jest": true,
+    "test": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "beforeAll": true,
+    "afterAll": true
+  },
   "extends": [
       "next/core-web-vitals",
       "eslint:recommended",
@@ -19,14 +30,27 @@
       "sourceType": "module"
   },
   "plugins": [
-      "react"
+      "react",
+      "testing-library"
   ],
-  "ignorePatterns": ["**/*.config.js", "**/eslint.config.js", "**/*.test.js", "**/*.drawio"],
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
+  "ignorePatterns": ["**/*.config.js", "**/eslint.config.js", "**/*.drawio"],
   "rules": {
       "semi": ["error"],
       "no-console": ["warn", { "allow": ["warn"] }],
       "react/prop-types": 0,
       "react/react-in-jsx-scope": 0,
-      "no-trailing-spaces": "error"
+      "no-trailing-spaces": "error",
+      "testing-library/no-render-in-lifecycle": ["error", {"allowTestingFrameworkSetupHook": "beforeEach"}]
   }
+ 
 }

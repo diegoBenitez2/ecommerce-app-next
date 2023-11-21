@@ -1,4 +1,6 @@
-@import '@styles/variables.scss';
+/* stylelint-disable selector-class-pattern */
+
+@import '@styles/variables';
 
 .Button {
   font-family: satoshi,system-ui;
@@ -8,38 +10,51 @@
   font-size: $display-2;
   border: 0;
   white-space: nowrap;
+
   &__icon {
     margin-left: 1em;
   }
+
   &:disabled {
     opacity: .6;
   }
 }
+
 .primary {
   background-color: $white;
   color: #000;
 }
+
 .secondary {
   background-color: $light-gray;
   color: #000;
 }
+
 .tertiary {
   background-color: $dark-primary;
   color: $white;
 }
+
 .fourty {
   background-color: $primary;
   color: $white;
 }
+
 .fifty {
   background-color: $dark-primary;
   color: $white;
 }
+
 .small {
   min-width: 95px;
   height: 48px;
 }
+
 .medium {
   min-width: 111px;
   height: 56px;
+}
+
+.width-full {
+  width: 100%;
 }
