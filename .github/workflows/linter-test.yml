@@ -3,10 +3,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
-      - develop
+      - main
 jobs:
   install_node_modules_call:
-    uses: ./.github/workflows/install_node_modules.yml
+    uses: ./.github/workflows/install-node-modules.yml
 
   testing-files:
     runs-on: ubuntu-latest
