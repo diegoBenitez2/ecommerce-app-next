@@ -28,7 +28,7 @@ const FeatureCard = ({
       break;
   }
   return (
-    <article data-testid='feature-card' className={cn(style.FeatureCard, `background-${background} color-${color}`)}>
+    <article data-testid='feature-card' className={cn(style.Container, `background-${background} color-${color}`)}>
       {icon}
       <h4 className={style.Title}>{ title }</h4>
       <p className={style.Desc}>{ desc }</p>

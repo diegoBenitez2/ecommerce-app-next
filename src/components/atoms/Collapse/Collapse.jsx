@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
+import styles from './Collapse.module.scss';
 import cn from 'classnames';
 
 export const Collapse = ({
@@ -8,16 +9,18 @@ export const Collapse = ({
 }) => {
 
   const [collapse, setCollapse] = useState(false);
-
+  const isCollapsedContainer = collapse && styles.container__collapsed;
+  const isCollapsedButton = collapse && styles.button__collapsed;
+  const isCollapsedArrow = collapse && styles.button_arrow__collapse;
   return (
     <div
       data-testid='collapse'
-      className={cn("px-4 text-left text-dark-primary border-2 border-x-white border-y-light-gray relative overflow-hidden transition-all duration-[500ms] ease-in-out", [collapse ? 'h-[52px] mt-0': 'h-fit'])}>
+      className={cn(styles.container, isCollapsedContainer)}>
       <button
-        className={cn("flex items-center justify-between w-full py-3 border-white bg-transparent cr-pointer", [collapse ? 'border-b-2' : 'border-b-0'])}
+        className={cn(styles.button, isCollapsedButton)}
         onClick={() => setCollapse(!collapse)}>
-        <span className="font-clash text-dark-primary mr-3">{label}</span>
-        <FiChevronDown className={cn("w-[20px] h-[20px] text-dark-primary cr-pointer transition transform ease duration-500", {'rotate-180': collapse})}/>
+        <span className={cn(styles.button_title)}>{label}</span>
+        <FiChevronDown className={cn(styles.button_arrow__collapse, isCollapsedArrow)}/>
       </button>
       <div
         className={cn("p-0 border-white", { "border-2 border-t-light-gray": !collapse })}>

@@ -36,6 +36,7 @@ export default function Home() {
               <ProductCard
                 key={idx}
                 urlImage={Photo}
+                altImage={'The Dandy chair'}
                 title={'The Dandy chair'}
                 price={'165'}/>
               ))

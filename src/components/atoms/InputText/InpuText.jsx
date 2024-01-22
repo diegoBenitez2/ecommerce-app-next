@@ -16,7 +16,7 @@ const InpuText = ({
         data-testid='input-custom'
         name={name}
         value={value}
-        className={cn(styles.InputText, styles[style])}
+        className={cn(styles.container, styles[style])}
         onInput={handleInput}/>
   );
 };

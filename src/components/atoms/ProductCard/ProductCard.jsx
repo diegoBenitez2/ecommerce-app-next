@@ -18,7 +18,6 @@ const ProductCard = ({
         ?  <Image
         src={urlImage}
         alt={altImage}
-        fill
         className={style.Picture} />
         : <div className={cn(style.NotImage, 'background-border-dark')}>
             <FaImage size='5rem' title='not image' className="color-border-gray" />

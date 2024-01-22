@@ -1,9 +1,11 @@
+/* stylelint-disable scss/at-import-partial-extension */
 @import '@styles/mediaQueries.scss';
 @import '@styles/variables.scss';
 
 .Link {
   text-decoration: none;
   color: inherit;
+  font-family: clash-display, sans-serif;
 }
 
 .Tap {
@@ -30,8 +32,6 @@
   position: relative;
   min-width: 163px;
   min-height: 288px;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   transition-property: min-width, height;
