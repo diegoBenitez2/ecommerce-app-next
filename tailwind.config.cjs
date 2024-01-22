@@ -18,8 +18,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      'satoshi': ['satoshi', 'system-ui'],
-      'clash': ['clash-display', 'system-ui', 'sans-serif'],
+      'satoshi': ['satoshi', 'sans-serif', 'system-ui'],
+      'clash': ['clash-display', 'sans-serif', 'system-ui'],
     },
     fontSize: {
       sm: '0.9rem',
@@ -38,6 +38,7 @@ module.exports = {
       'border-gray': '#EBE8F4',
       'border-dark': '#CAC6DA',
       'white': '#FFF',
+      'black': '#000',
     },
   },
   variants: {},
