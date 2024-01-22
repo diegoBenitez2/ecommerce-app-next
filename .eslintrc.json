@@ -50,7 +50,16 @@
       "react/prop-types": 0,
       "react/react-in-jsx-scope": 0,
       "no-trailing-spaces": "error",
-      "testing-library/no-render-in-lifecycle": ["error", {"allowTestingFrameworkSetupHook": "beforeEach"}]
+      "testing-library/no-render-in-lifecycle": ["error", {"allowTestingFrameworkSetupHook": "beforeEach"}],
+      "import/no-anonymous-default-export": ["error", {
+        "allowArray": false,
+        "allowArrowFunction": false,
+        "allowAnonymousClass": false,
+        "allowAnonymousFunction": false,
+        "allowCallExpression": false, // The true value here is for backward compatibility
+        "allowLiteral": false,
+        "allowObject": true
+      }]
   }
  
 }
