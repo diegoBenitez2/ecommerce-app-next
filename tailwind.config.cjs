@@ -40,6 +40,9 @@ module.exports = {
       'white': '#FFF',
       'black': '#000',
     },
+    boxShadow: {
+      'normal': 'inset 0px 0px 6px 6px rgba(0, 0, 0, 0.1)',
+    }
   },
   variants: {},
   plugins: [],
