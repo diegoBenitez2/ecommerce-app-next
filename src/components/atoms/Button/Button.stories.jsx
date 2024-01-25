@@ -13,14 +13,9 @@ export default {
     },
     size: {
       control: 'radio',
-      options: ['small', 'medium', 'w-full'],
+      options: ['small', 'medium', 'wFull'],
       description: 'Size of the button',
       value: 'small',
-    },
-    iconColor: {
-      control: 'color',
-      description: 'Color of the icon',
-      value: '#fff',
     },
     style: {
       control: 'radio',
@@ -40,6 +35,7 @@ export const Primary = {
     text: 'Button',
     disabled: false,
     style: 'primary',
+    isIcon: true,
   },
 };
 export const Secondary = {

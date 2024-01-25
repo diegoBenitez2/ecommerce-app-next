@@ -1,17 +1,16 @@
 import cn from "classnames";
 import { FaAngleDown } from 'react-icons/fa';
-// import styles from './Button.module.scss';
 
 const Button = ({
   text='Button',
   size='small',
-  iconColor,
+  isIcon,
   style,
   disabled,
   onclick}) => {
 
-  const styles = {
-    primary: 'bg-primary text-black',
+  const variants = {
+    primary: 'bg-primary text-white',
     secondary: 'bg-light-gray text-black',
     tertiary: 'bg-dark-primary text-white',
     fourty: 'bg-primary text-white',
@@ -21,24 +20,29 @@ const Button = ({
   const sizes = {
     small: 'min-w-[95px] h-[48px]',
     medium: 'min-w-[111px] h-[56px]',
+    wFull: 'w-full',
+  };
+
+  const iconColor = {
+    primary: 'text-white',
+    secondary: 'text-black',
+    tertiary: 'text-white',
+    fourty: 'text-white',
+    fifty: 'text-white',
   };
 
   return (
     <button
       data-testid='btn-custom'
       disabled={disabled}
-      className={cn(`font-satoshi items-center justify-center py-4 px-8 
-                      border-0 whitespace-nowrap text-sm
-                      disabled:opacity-60`,
-                      styles.container,
-                      styles[style],
-                      sizes[size],)}
+      className={cn(`font-satoshi flex items-center justify-center py-4 px-8 border-0 whitespace-nowrap text-sm disabled:opacity-60 transition-shadow hover:shadow-normal trasnform active:scale-95`,
+      variants[style],
+      sizes[size],)}
       onClick={onclick}>
       <span>{ text }</span>
       {
-        iconColor && <FaAngleDown
-                        style={{ color: iconColor }}
-                        className="ml-4"
+        isIcon && <FaAngleDown
+                        className={cn(`ml-2`, iconColor[style])}
                         data-testid='btn-icon' />
       }
 
