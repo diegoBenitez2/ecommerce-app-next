@@ -41,7 +41,11 @@ module.exports = {
       'black': '#000',
     },
     boxShadow: {
-      'normal': 'inset 0px 0px 6px 6px rgba(0, 0, 0, 0.1)',
+      'btn-dark-primary': 'inset 0 0 1.8em .5em #2A254B',
+      'btn-primary': 'inset 0 0 1.8em .5em #4E4D93',
+      'btn-b-gray': 'inset 0 0 1.8em .5em #EBE8F4',
+      'btn-b-dark-gray': 'inset 0 0 1.8em .5em #CAC6DA',
+      'btn-b-white': 'inset 0 0 1.8em .5em #FFF',
     }
   },
   variants: {},

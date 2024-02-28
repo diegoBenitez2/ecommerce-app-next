@@ -17,7 +17,7 @@ export default {
       description: 'Size of the button',
       value: 'small',
     },
-    style: {
+    variant: {
       control: 'radio',
       options: ['primary', 'secondary', 'tertiary', 'fourty', 'fifty'],
       description: 'Style background al foreground of the button',
@@ -34,39 +34,40 @@ export const Primary = {
   args: {
     text: 'Button',
     disabled: false,
-    style: 'primary',
-    isIcon: true,
+    variant: 'primary',
+    hasIcon: true,
   },
 };
 export const Secondary = {
   args: {
     ...Primary.args,
-    style: 'secondary',
+    variant: 'secondary',
+    hasIcon: false,
   },
 };
 
 export const Tertiary = {
   args: {
     ...Primary.args,
-    style: 'tertiary',
+    variant: 'tertiary',
   },
 };
 export const Fourty = {
   args: {
     ...Primary.args,
-    style: 'fourty',
+    variant: 'fourty',
   },
 };
 export const Fifty = {
   args: {
     ...Primary.args,
-    style: 'Fifty',
+    variant: 'fifty',
   },
 };
 export const widthFull = {
   args: {
     ...Primary.args,
-    style: 'fourty',
+    variant: 'fourty',
     size: 'w-full',
   }
 };
@@ -74,6 +75,6 @@ export const Disabled = {
   args: {
    ...Primary.args,
     disabled: true,
-    style: 'secondary'
+    variant: 'secondary'
   },
 };
