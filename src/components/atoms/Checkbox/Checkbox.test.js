@@ -8,7 +8,6 @@ describe('<Checkbox',() => {
   beforeEach(() => {
     onChange = jest.fn((obj) => ({ name: obj.name, value: obj.value }));
     render(<Checkbox
-      id='list'
       name='list-product'
       value='chairs'
       label='Checkbox'
@@ -23,7 +22,6 @@ describe('<Checkbox',() => {
     // Assert
     expect(input).toBeDefined();
     expect(label).toBeDefined();
-    expect(input).toHaveAttribute('id', 'list');
     expect(input).toHaveAttribute('name', 'list-product');
     expect(input).toHaveAttribute('value', 'chairs');
   });

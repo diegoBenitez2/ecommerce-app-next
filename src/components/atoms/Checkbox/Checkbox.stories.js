@@ -8,10 +8,6 @@ export default {
   },
   tags: ['autodocs'],
   argTypes: {
-    id: {
-      control: 'text',
-      description: "Checkbox id",
-    },
     label: {
       control: 'text',
       description: "Checkbox label",
@@ -37,11 +33,9 @@ export default {
 
 export const Default = {
   args: {
-    id: "checkbox",
     label: "Checkbox",
     value: "checkbox",
     name: "checkbox",
-    className: "",
   },
 };
 
